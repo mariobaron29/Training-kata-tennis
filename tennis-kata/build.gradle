@@ -1,0 +1,26 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+
+group = 'com.co.devco'
+version = '1.0-SNAPSHOT'
+
+description = "Tennis kata"
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+implementation 'junit:junit:4.13.1'
+}
+
+test {
+    useJUnitPlatform()
+}
